@@ -2,6 +2,64 @@
 // ZNE Leaderboard - JavaScript
 // ==========================================
 
+document.addEventListener('DOMContentLoaded', () => {
+    initNavigation();
+    initScrollEffects();
+    loadLeaderboard();
+});
+
+// ------------------------------------------
+// Navigation
+// ------------------------------------------
+
+function initNavigation() {
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navMenu.classList.toggle('active');
+        });
+
+        const navLinks = navMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    }
+}
+
+// ------------------------------------------
+// Scroll Effects
+// ------------------------------------------
+
+function initScrollEffects() {
+    const navContainer = document.getElementById('navContainer');
+
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            navContainer.classList.add('scrolled');
+        } else {
+            navContainer.classList.remove('scrolled');
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+}
+
+// ------------------------------------------
+// Load Leaderboard from API
+// ------------------------------------------
+
 const API_ENDPOINT = 'https://zne.breed.rip/api/leaderboard';
 const leaderboardEl = document.getElementById('leaderboard');
 
@@ -98,5 +156,3 @@ async function loadLeaderboard() {
         leaderboardEl.innerHTML = '<div class="error">Failed to load leaderboard data. Please try again later.</div>';
     }
 }
-
-document.addEventListener('DOMContentLoaded', loadLeaderboard);

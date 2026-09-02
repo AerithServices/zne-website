@@ -3,32 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZNE Leaderboard</title>
-    <meta name="description" content="View ZNE command leaderboard stats">
+    <title>Leaderboard - ZNE</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://zne.breed.rip/assets/zne_fat.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div class="nav-content">
-            <a href="/" class="logo">
-                <div class="logo-icon">Z</div>
-                <span class="logo-text">ZNE</span>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container" id="navContainer">
+            <a href="/" class="nav-logo">
+                <div class="nav-logo-icon">
+                    <img src="https://zne.breed.rip/assets/zne.png" alt="ZNE">
+                </div>
+                <span class="nav-logo-text">ZNE</span>
             </a>
-            <a href="/" class="nav-back">
-                <i class="fas fa-arrow-left"></i>
-                <span>Back to Main Site</span>
-            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link" data-page="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/webhook" class="nav-link" data-page="webhook">Webhook</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/commands" class="nav-link" data-page="commands">Commands</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/leaderboard" class="nav-link active" data-page="leaderboard">Leaderboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/tos" class="nav-link" data-page="tos">Terms</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/streaming" class="nav-link" data-page="streaming">Streaming</a>
+                </li>
+                <div class="nav-actions">
+                    <button class="nav-login">Login</button>
+                    <a href="https://discord.gg/U5q7SnGnet" target="_blank" rel="noopener noreferrer" class="nav-invite">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        Invite
+                    </a>
+                </div>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
         </div>
     </nav>
 
-    <main class="container">
+    <main class="main">
         <section class="page-header">
-            <div class="badge"><i class="fas fa-trophy"></i> Raider Bot</div>
-            <h1><span class="gradient">Leaderboard</span></h1>
-            <p>See who has used the most ZNE commands. Open a user to view every command they have run.</p>
+            <div class="badge">Raider Bot</div>
+            <h1 class="page-title"><span class="gradient">Leaderboard</span></h1>
+            <p class="page-subtitle">See who has used the most ZNE commands. Open a user to view every command they have run.</p>
         </section>
 
         <section class="summary-grid">
@@ -47,12 +80,15 @@
         </section>
 
         <section id="leaderboard" class="leaderboard">
-            <div class="loading"><i class="fas fa-circle-notch fa-spin"></i> Loading leaderboard...</div>
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <span class="loading-text">Loading Leaderboard</span>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 ZNE Development Team. All rights reserved.</p>
+    <footer class="footer">
+        <p>&copy; 2026 ZNE. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
