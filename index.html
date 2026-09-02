@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZNE - Discord's Premier Raider Bot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://zne.breed.rip/assets/zne_fat.png">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container" id="navContainer">
+            <a href="/" class="nav-logo">
+                <div class="nav-logo-icon">
+                    <img src="https://zne.breed.rip/assets/zne.png" alt="ZNE">
+                </div>
+                <span class="nav-logo-text">ZNE</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link active" data-page="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/webhook" class="nav-link" data-page="webhook">Webhook</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/commands" class="nav-link" data-page="commands">Commands</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/leaderboard" class="nav-link" data-page="leaderboard">Leaderboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/tos" class="nav-link" data-page="tos">Terms</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/streaming" class="nav-link" data-page="streaming">Streaming</a>
+                </li>
+                <div class="nav-actions">
+                    <button class="nav-login">Login</button>
+                    <a href="https://discord.gg/U5q7SnGnet" target="_blank" rel="noopener noreferrer" class="nav-invite">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        Invite
+                    </a>
+                </div>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Discord's Premier Raider Bot</h1>
+                <p class="hero-subtitle">ZNE, discord's most versatile bot</p>
+                <div class="hero-buttons">
+                    <a href="https://discord.gg/U5q7SnGnet" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        Join Server
+                    </a>
+                    <a href="/commands" class="btn btn-secondary">Explore Features</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="features-container">
+                <div class="features-left">
+                    <h2 class="features-title">
+                        <span class="gradient-text">No-Admin</span> Raider
+                    </h2>
+                    <p class="features-subtext">raid servers without admin</p>
+                    <ul class="features-list">
+                        <li class="features-list-item">
+                            <span class="feature-icon"></span>
+                            <span class="feature-text">25+ Commands</span>
+                        </li>
+                        <li class="features-list-item">
+                            <span class="feature-icon"></span>
+                            <span class="feature-text">Customize Message</span>
+                        </li>
+                        <li class="features-list-item">
+                            <span class="feature-icon"></span>
+                            <span class="feature-text">Climb the leaderboards!</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="features-right">
+                    <div class="features-image-wrapper">
+                        <img src="/assets/noadmin.png" alt="No-Admin Raider Feature" class="features-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ready" id="ready">
+            <div class="ready-container">
+                <h2 class="ready-title">Ready to get started?</h2>
+                <p class="ready-subtitle">Join thousands of servers already using ZNE.</p>
+                <div class="ready-buttons">
+                    <a href="https://discord.gg/U5q7SnGnet" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        Add to Server
+                    </a>
+                    <a href="/commands" class="btn btn-secondary">View Commands</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 ZNE. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
