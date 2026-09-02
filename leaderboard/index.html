@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZNE Leaderboard</title>
+    <meta name="description" content="View ZNE command leaderboard stats">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://zne.breed.rip/assets/zne_fat.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="/" class="logo">
+                <div class="logo-icon">Z</div>
+                <span class="logo-text">ZNE</span>
+            </a>
+            <a href="/" class="nav-back">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Main Site</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="page-header">
+            <div class="badge"><i class="fas fa-trophy"></i> Raider Bot</div>
+            <h1><span class="gradient">Leaderboard</span></h1>
+            <p>See who has used the most ZNE commands. Open a user to view every command they have run.</p>
+        </section>
+
+        <section class="summary-grid">
+            <div class="summary-card">
+                <div class="summary-value" id="totalUsers">0</div>
+                <div class="summary-label">Users</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-value" id="totalCommands">0</div>
+                <div class="summary-label">Total Commands</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-value" id="topUser">—</div>
+                <div class="summary-label">Top User</div>
+            </div>
+        </section>
+
+        <section id="leaderboard" class="leaderboard">
+            <div class="loading"><i class="fas fa-circle-notch fa-spin"></i> Loading leaderboard...</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ZNE Development Team. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
